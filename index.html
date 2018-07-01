@@ -10,9 +10,6 @@ body {
 	margin-top: 5em;
 	line-height: 1.3em;
 }
-ol {
-	text-align: left;
-}
 li {
 	margin-bottom: 0.4em;
 }
@@ -24,7 +21,7 @@ i {
 	margin-left: auto;
 	margin-right: auto;
 	max-width: 60%;
-	text-align: center;
+	text-align: left;
 	color: white;
 	font-family: 'Bungee Hairline', cursive;
 	font-weight: 900;
@@ -43,23 +40,28 @@ i {
 	filter: brightness(0.8) contrast(1.1) saturate(1.3) hue-rotate(15deg);
 }
 #map {
-	filter: drop-shadow(10px 3px 2px rgba(255,255,255,0.3));
+	filter: drop-shadow(0.2em 0.5em 0.2em rgba(255,255,255,0.3));
 }
 .contentImage {
+	animation: lateappear 4.5s linear;
 	width: 80%;
 }
 .title {
 	font-size: 300%;
 	animation: appear 2s linear;
+	text-align: center;
 }
 .subtitle {
 	font-size: 175%;
 	animation: lateappear 4s linear;
 	position: relative;
+	text-align: center;
 }
 .content {
 	animation: lateappear 4.5s linear;
 	position: relative;
+	padding-left: 1.5em;
+	padding-right: 1.5em;
 }
 ol {
 	animation: lateappear 5s linear;
@@ -152,8 +154,10 @@ window.onresize = function(event) {
 <p class="subtitle">Krótki wstęp</p>
 <hr />
 <p class="content">
-	<img id="map" class="contentImage" src="https://dl.dropbox.com/s/ehw6axbbsv47mcg/mapaT.png?dl=0"></img>
+	III Wojna Światowa zakończyła wygląd świata, jaki znaliśmy. Stary Kontynent, Czarny Ląd i Nowy Świat istnieją dla nas już tylko na kartach historii. Teraz, naszą jedyną ostoją pozostał Daleki Wschód chroniony przed promieniowaniem jądrowym przez pole magnetyczne - wielki na pół globu cud technologii, którego stworzenie uwarunkowane było niepokojem przed zagładą całej ludzkości, i uruchomione w ostatniej chwili, tuż przed wybuchem wojny. Jest dziełem najwybitniejszych naukowców, którzy jednak za nasze życie zapłacili własnym. My także zapłaciliśmy cenę - słońce i niebo są dla nas tylko wspomnieniem. Witamy w 2230 roku w podziemnym Kantonie, w świecie, który przeoczyła śmierć.
+	<br /><br />
 </p>
+<img id="map" class="contentImage" src="https://dl.dropbox.com/s/ehw6axbbsv47mcg/mapaT.png?dl=0"></img>
 <p class="subtitle">Niezbędnik</p>
 <hr />
 <p class="content">
@@ -175,9 +179,9 @@ window.onresize = function(event) {
 		<li><u>spryciarz</u>:<br />Może próbować ukraść przedmiot.  W tym celu, sumuje swoją <i>DEX</i> oraz wynik na kości. Gdy wynik jest wyższy od 9, kradzież przebiega pomyślnie.</li>
 		<li><u>sadysta</u>:<br />-1<i>CHA</i>. Gdy zabije lub pokona w walce człowieka, może się nad nim pastwić aby odzyskać 1<i>ENE</i>. Może żywić się ludzkim mięsem, w odróżnieniu od pozostałych śmiałków, których to brzydzi.</li>
 		<li><u>mężny</u>:<br />+2<i>STR</i>, na warcie może stać sam aby przebiegła pomyślnie</li>
-		<li><u>leniuch</u>:<br />Może spać w dzień aby odzyskać 1<i>ENE</i> w dowolnym momencie gry. Spanie podczas bitwy nie jest gwarancją jej przeżycia :)</li>
+		<li><u>leniuch</u>:<br />Może spać w dzień aby odzyskać 1<i>ENE</i> w dowolnym momencie gry. Spanie podczas walki nie jest gwarancją jej przeżycia :)</li>
 		<li><u>geniusz</u>:<br />+2 dedukcji, +1 do <i>INT, OBS</i>. Modyfikator "tchórzliwy" - nie może stać na wartach, boi się też wychodzić poza obóz sam.</li>
-		<li><u>religijny</u>:<br />+1<i>CHA</i>, może szerzyć dowolną religię. Gdy nawróci na nią jakąś postać, otrzymuje 1<i>G</i>. Może modlić się o powodzenie jakiejś akcji - akcja przynosi lepsze efekty gdy śmiałek wyrzuci 10.</li>
+		<li><u>religijny</u>:<br />+1<i>CHA</i>, może szerzyć dowolną religię. Gdy nawróci na nią jakąś postać, otrzymuje 1<i>G</i>. Może modlić się o powodzenie jakiejś akcji innego śmiałka - wówczas wyrzucenie 9 również przynosi przerzut i jest traktowane jak 10.</li>
 </ol>
 </p>
 </div>
