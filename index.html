@@ -44,6 +44,12 @@ i {
 	width: 80%;
 	animation: lateappear 4.5s linear;
 }
+#bar {
+	position: relative;
+	left: 0;
+	color: rgba(255,255,255,0);
+	animation: barAnimation 2.2s steps(10);
+}
 .center {
 	text-align: center;
 }
@@ -52,8 +58,9 @@ i {
 }
 .title {
 	font-size: 300%;
-	animation: appear 2s linear;
 	text-align: center;
+	position: relative;
+	right: 0.5em;
 }
 .subtitle {
 	font-size: 175%;
@@ -79,6 +86,33 @@ i {
 	overflow: hidden;
 	word-break: normal;
 }
+.s1 {
+	animation: appear 0.3s linear;
+}
+.s2 {
+	animation: appear 0.51s linear;
+}
+.s3 {
+	animation: appear 0.73s linear;
+}
+.s4 {
+	animation: appear 0.94s linear;
+}
+.s5 {
+	animation: appear 1.15s linear;
+}
+.s6 {
+	animation: appear 1.36s linear;
+}
+.s7 {
+	animation: appear 1.58s linear;
+}
+.s8 {
+	animation: appear 1.79s linear;
+}
+.s9 {
+	animation: appear 2s linear;
+}
 ol {
 	animation: lateappear 4.5s linear;
 	position: relative;
@@ -99,60 +133,34 @@ ul {
 	list-style-type: square;
 	margin: 0;
 }
-@keyframes appear{
-	from {
-		opacity: 0;
-	}
-	50% {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+@keyframes appear {
+	from { opacity: 0; }
+	99% { opacity: 0; }
+	to { opacity: 1; }
 }
-@keyframes bgappear{
-	from {
-		background-color: rgba(255,255,255,0);
-	}
-	70% {
-		background-color: rgba(255,255,255,0);
-	}
-	to {
-		background-color: rgba(255,255,255,0.15);
-	}
+@keyframes bgappear {
+	from { background-color: rgba(255,255,255,0); }
+	70% { background-color: rgba(255,255,255,0); }
+	to { background-color: rgba(255,255,255,0.15); }
 }
-@keyframes lateappear{
-	from {
-		opacity: 0;
-	}
-	75% {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+@keyframes lateappear {
+	from { opacity: 0; }
+	75% { opacity: 0; }
+	to { opacity: 1; }
 }
-@keyframes firmappear{
-	from {
-		opacity: 0;
-	}
-	99% {
-		opacity: 0;
-	}
-	to {
-		opacity: 1;
-	}
+@keyframes firmappear {
+	from { opacity: 0; }
+	99% { opacity: 0; }
+	to { opacity: 1; }
 }
-@keyframes extend{
-	from {
-		width: 0;
-	}
-	75% {
-		width: 0;
-	}
-	to {
-		width: 100%;
-	}
+@keyframes extend {
+	from { width: 0; }
+	75% { width: 0; }
+	to { width: 100%; }
+}
+@keyframes barAnimation {
+	from { color: rgba(255,255,255,1); left: 0.95em; }
+	to { color: rgba(255,255,255,1); left: 8.2em; }
 }
 </style>
 </head>
@@ -179,7 +187,10 @@ window.onresize = function(event) {
 };
 </script>
 <div id="page">
-<p class="title">Guangzhou</p>
+<p class="title">
+	<span id="bar">_</span>
+	<span class="s1">G</span><span class="s2">u</span><span class="s3">a</span><span class="s4">n</span><span class="s5">g</span><span class="s6">z</span><span class="s7">h</span><span class="s8">o</span><span class="s9">u</span>
+</p>
 <p class="subtitle">Krótki wstęp</p>
 <hr />
 <p class="content">
@@ -192,7 +203,7 @@ window.onresize = function(event) {
 </p>
 <p class="center">
 	<a href="https://dl.dropbox.com/s/ehw6axbbsv47mcg/mapaT.png?dl=0" target="_blank">
-	<img id="map" src="https://dl.dropbox.com/s/ehw6axbbsv47mcg/mapaT.png?dl=0"></img></a>
+	<!--img id="map" src="https://dl.dropbox.com/s/ehw6axbbsv47mcg/mapaT.png?dl=0"></img--></a>
 </p>
 <p class="content">
 	Oto cały nasz świat. W przeciągu ostatnich dwóch wieków nastąpiło wiele zmian w podziale politycznym. Wyróżnione państwa i terytoria
