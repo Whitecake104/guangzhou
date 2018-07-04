@@ -1,0 +1,44 @@
+<html>
+<head>
+<title>Mapa</title>
+<style type="text/css">
+body {
+	background-color: black;
+	margin: 0;
+}
+#bg {
+    display: block;
+    margin: auto;
+	z-index: -1;
+}
+#cross {
+	position: fixed;
+	right: 0;
+	top: 0;
+	width: 10%;
+	height: auto;
+	cursor: pointer;
+}
+</style>
+</head>
+<body>
+<img src="http://raw.githubusercontent.com/Xander402/guangzhou/master/cross.png" id="cross" onclick="window.close();"></img>
+<img src="http://raw.githubusercontent.com/Xander402/guangzhou/master/mapa.png" id="bg"></img>
+<script type="text/javascript">
+function resizeBackground() {
+	var body = document.body, html = document.documentElement;
+	var height = Math.max(body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+	var width = Math.max(body.scrollWidth, body.offsetWidth, html.clientWidth, html.scrollWidth, html.offsetWidth);
+	if (height / width > 1) {
+		document.getElementById("bg").setAttribute("style", "width: 100%; height: auto;");
+	} else {
+		document.getElementById("bg").setAttribute("style", "width: auto; height: 100%;");
+	}
+}
+resizeBackground();
+window.onresize = function(event) {
+	resizeBackground();
+};
+</script>
+</body>
+</html>
