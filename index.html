@@ -312,6 +312,11 @@ window.onresize = function(event) {
 			<td class="tg-1bmp">los</td>
 			<td class="tg-1bmp">3</td>
 		</tr>
+		<tr>
+			<td class="tg-1bmp">ML</td>
+			<td class="tg-1bmp">poziom stresu</td>
+			<td class="tg-1bmp">0</td>
+		</tr>
 	</table>
 	<br />
 </p>
@@ -320,7 +325,7 @@ window.onresize = function(event) {
 	<table class="tg">
 		<tr>
 			<td class="tg-1bmp">sprint</td>
-			<td class="tg-1bmp" rowspan="5">4 dla<br />każdego,<br />użycie<br />kosztuje<br />1<i>ENE</i></td>
+			<td class="tg-1bmp" rowspan="5">łącznie 4,<br />użycie<br />kosztuje<br />1<i>ENE</i></td>
 		</tr>
 		<tr>
 			<td class="tg-1bmp">walka wręcz</td>
@@ -371,62 +376,66 @@ window.onresize = function(event) {
 <p class="content">
 	<u>Charakteryzatory</u>
 	<ol>
-		<li><u>bojowy</u>:<br />+2<i>STR</i> podczas walki. Za wygraną walkę nie traci energii. Dopiero 4 małe rany liczą się dla
+		<li><u>Bojowy</u>:<br />+2<i>STR</i> podczas walki. Za wygraną walkę nie traci energii. Dopiero 4 małe rany liczą się dla
 			niego jako duża rana.</li>
-		<li><u>honorowy</u>:<br />Może dwa razy wydać <i>LP</i> na przerzut kości w walce. Przegrywając ją, traci tylko połowę wymaganej
+		<li><u>Honorowy</u>:<br />Może dwa razy wydać <i>LP</i> na przerzut kości w walce. Przegrywając ją, traci tylko połowę wymaganej
 			energii.</li>
-		<li><u>błyskotliwy</u>:<br />+2<i>INT</i>, przy dokonywaniu zwiadu otrzymuje +1 do wartości dedukcji i maskowania.</li>
-		<li><u>przyjazny</u>:<br />+2 cha, za zaprzyjaźnienie postaci występującej w grze, wyrzuciwszy na kostce przynajmniej 8,
-			otrzymuje od postaci 1<i>G</i>.</li>
-		<li><u>wytrzymały</u>:<br />Jego maksymalne <i>ENE</i> zwiększone jest o 1, nie traci <i>ENE</i> przy sprincie.</li>
-		<li><u>nocny marek</u>:<br />Śpiąc 6 godzin otrzymuje 2<i>ENE</i>, 4 godziny - 1<i>ENE</i>.</li>
-		<li><u>demagog</u>:<br />+1<i>CHA</i>, łatwiej mu przekonać postacie występujące w grze do swojej racji. Do
+		<li><u>Błyskotliwy</u>:<br />+2<i>INT</i>, przy dokonywaniu zwiadu otrzymuje +1 do wartości dedukcji i maskowania.</li>
+		<li><u>Przyjazny</u>:<br />+2<i>CHA</i>, za zaprzyjaźnienie postaci występującej w grze, wyrzuciwszy na kostce przynajmniej 8,
+			otrzymuje od postaci 1<i>G</i> oraz traci 1<i>ML</i>. Otrzymuje jednak +1<i>ML</i> po każdej walce.</li>
+		<li><u>Wytrzymały</u>:<br />Jego maksymalne <i>ENE</i> zwiększone jest o 1, nie traci <i>ENE</i> przy sprincie.</li>
+		<li><u>Nocny marek</u>:<br />Śpiąc 6 godzin otrzymuje 2<i>ENE</i>, 4 godziny - 1<i>ENE</i>.</li>
+		<li><u>Demagog</u>:<br />+1<i>CHA</i>, łatwiej mu przekonać postacie występujące w grze do swojej racji. Do
 			przekonywania otrzymuje modyfikator +2<i>CHA</i>.</li>
-		<li><u>spostrzegawczy</u>:<br />+2<i>OBS</i>, może liczyć na podpowiedzi od <i>GM</i>.</li>
-		<li><u>gibki</u>:<br />+2<i>DEX</i>, zamiast walczyć wręcz może unikać ciosów. Aby wykonać tą akcję, sumuje wartość
+		<li><u>Spostrzegawczy</u>:<br />+2<i>OBS</i>, może liczyć na podpowiedzi od <i>GM</i>.</li>
+		<li><u>Gibki</u>:<br />+2<i>DEX</i>, zamiast walczyć wręcz może unikać ciosów. Aby wykonać tą akcję, sumuje wartość
 			swojego <i>DEX</i> i rzutu kostką. Gdy jego wynik jest wyższy od 10, wygrywa walkę zamęczywszy wroga na tyle, żeby
 			spokojnie odejść. Zdolności tej można użyć najwyżej raz na dobę</li>
-		<li><u>wysportowany</u>:<br />Otrzymuje po jednym dodatkowym punkcie do wybranych przez siebie dwóch umiejętności</li>
-		<li><u>szczęściarz</u>:<br />Limit jego <i>LP</i> jest zwiększony o 1. Gdy w wyniku źle trzymanej warty stanie się coś
+		<li><u>Wysportowany</u>:<br />Otrzymuje po jednym dodatkowym punkcie do wybranych przez siebie dwóch umiejętności</li>
+		<li><u>Szczęściarz</u>:<br />Limit jego <i>LP</i> jest zwiększony o 1. Gdy w wyniku źle trzymanej warty stanie się coś
 			nieprzyjemnego, może rzucic kostką raz, nie zużywając <i>LP</i>. Wyrzucenie conajmniej 8 skutkuje ominięciem przez niego skutków
 			wydarzenia.</li>
-		<li><u>alkoholik</u>:<br />Posiada piersiówkę z alkoholem, który jednorazowo podnosi jego <i>CHA</i> o 2 lub pozwala na
+		<li><u>Alkoholik</u>:<br />Posiada piersiówkę z alkoholem, który jednorazowo podnosi jego <i>CHA</i> o 2 lub pozwala na
 			przerzut kości nie marnując <i>LP</i>. Pojemnik ma pojemność 2 racji i może zostać ponownie napełniony. Gdy alkoholik 2 dni z rzędu nie
-			zażywa alkoholu, otrzymuje modyfikator -1 do <i>DEX, INT, CHA</i>. Jedna porcja odkaża dwie małe rany.</li>
-		<li><u>zręczne dłonie</u>:<br />Gdy śmiałkowie mają do tego materiały, leczy skuteczniej niż inni. Postawione przez niego
+			zażywa alkoholu, otrzymuje modyfikator -1 do <i>DEX, INT, CHA</i> i +1<i>ML</i>. Jedna porcja odkaża dwie małe rany.</li>
+		<li><u>Zręczne dłonie</u>:<br />Gdy śmiałkowie mają do tego materiały, leczy skuteczniej niż inni. Postawione przez niego
 			budowle lub zrobione przedmioty są trwalsze niż wykonane przez pozostałych śmiałków.</li>
-		<li><u>spryciarz</u>:<br />Może próbować ukraść przedmiot. W tym celu, sumuje swoją <i>DEX</i> oraz wynik na kości.
+		<li><u>Spryciarz</u>:<br />Może próbować ukraść przedmiot. W tym celu, sumuje swoją <i>DEX</i> oraz wynik na kości.
 			Gdy wynik jest wyższy od 9, kradzież przebiega pomyślnie.</li>
-		<li><u>sadysta</u>:<br />-1<i>CHA</i>. Gdy zabije lub pokona w walce człowieka, może się nad nim pastwić aby odzyskać
+		<li><u>Sadysta</u>:<br />-1<i>CHA</i>. Gdy zabije lub pokona w walce człowieka, może się nad nim pastwić aby odzyskać
 			1<i>ENE</i>. Może żywić się ludzkim mięsem, w odróżnieniu od pozostałych śmiałków, których to brzydzi.</li>
-		<li><u>mężny</u>:<br />+2<i>STR</i>, na warcie może stać sam aby przebiegła pomyślnie</li>
-		<li><u>leniuch</u>:<br />Może spać w dzień aby odzyskać 1<i>ENE</i> w dowolnym momencie gry. Spanie podczas walki nie
+		<li><u>Mężny</u>:<br />+2<i>STR</i>, na warcie może stać sam aby przebiegła pomyślnie</li>
+		<li><u>Leniuch</u>:<br />Może spać w dzień aby odzyskać 1<i>ENE</i> w dowolnym momencie gry. Spanie podczas walki nie
 			jest gwarancją jej przeżycia :)</li>
-		<li><u>geniusz</u>:<br />+2 dedukcji, +1 do <i>INT, OBS</i>. Modyfikator "tchórzliwy" - nie może stać na wartach, boi się
+		<li><u>Geniusz</u>:<br />+2 dedukcji, +1 do <i>INT, OBS</i>. Modyfikator "tchórzliwy" - nie może stać na wartach, boi się
 			też wychodzić poza obóz sam.</li>
-		<li><u>religijny</u>:<br />+1<i>CHA</i>, może szerzyć dowolną religię. Gdy nawróci na nią jakąś postać, otrzymuje
+		<li><u>Religijny</u>:<br />+1<i>CHA</i>, może szerzyć dowolną religię. Gdy nawróci na nią jakąś postać, otrzymuje
 			1<i>G</i>. Może modlić się o powodzenie jakiejś akcji innego śmiałka - wówczas wyrzucenie 9 również przynosi przerzut i jest
 			traktowane jak 10.</li>
-		<li><u>stoik</u>:<br />+1<i>OBS</i>, -1<i>CHA</i>. Ignoruje efekty pierwszego poziomu stresu. Może przeszukiwać trupy w celu
-			znalezienia ciekawych przedmiotów</li>
+		<li><u>Stoik</u>:<br />+1<i>OBS</i>, -1<i>CHA</i>. Ignoruje efekty pierwszego poziomu stresu. Nie każda walka podnosi poziom
+			stresu. Może przeszukiwać trupy w celu znalezienia ciekawych przedmiotów.</li>
 	</ol>
 	<br />
 </p>
 <p class="content">
 	<u>Mechanizmy</u>
 	<ol>
-		<li><u>sen</u>:<br />Spanie 8 godzin regeneruje 2<i>ENE</i>, 6 godzin regeneruje 1<i>ENE</i>, sen 4 godzinny nie regeneruje
+		<li><u>Sen</u>:<br />Spanie 8 godzin regeneruje 2<i>ENE</i>, 6 godzin regeneruje 1<i>ENE</i>, sen 4 godzinny nie regeneruje
 			<i>ENE</i>, a spanie mniej niż 4 godziny zabiera 1<i>ENE</i>. Gdy śmiałek śpi dwie noce z rzędu 4 lub mniej godzin otrzymuje
-			modyfikator -1 do <i>str</i>, <i>dex</i>, <i>obs</i>, <i>int</i> oraz <i>cha</i>.
-		</li>
-		<li><u>walka</u>:<br />Suma <i>STR</i>, walki wręcz oraz wyniku rzutu kostką.
-		<li><u>zwiad</u>:<br />Suma <i>INT</i>, <i>OBS</i>, maskowania, dedukcji oraz wyniku rzutu kostką.
-		<li><u>warta</u>:<br />Jedna warta trwa dwie godziny. Aby warta była bezpieczna, należy wystawić dwóch wartowników. Gdy warta
+			modyfikator -1 do <i>str</i>, <i>dex</i>, <i>obs</i>, <i>int</i> oraz <i>cha</i>.</li>
+		<li><u>Walka</u>:<br />Suma <i>STR</i>, walki wręcz oraz wyniku rzutu kostką.</li>
+		<li><u>Zwiad</u>:<br />Suma <i>INT</i>, <i>OBS</i>, maskowania, dedukcji oraz wyniku rzutu kostką.</li>
+		<li><u>Warta</u>:<br />Jedna warta trwa dwie godziny. Aby warta była bezpieczna, należy wystawić dwóch wartowników. Gdy warta
 			składa się z dwóch osob, po upływie dwóch godzin budzi następną warte. Gdy wartownik jest jeden, rzuca kostką której nie może
-			przerzucić. Gdy wypadnie przynajmniej 5, to wartownik zasypia po godzinie warty i resztę nocy śmiałkowie spędzają bez ochrony. 
-		<li><u>ucieczka</u>:<br />Suma <i>DEX</i>, sprintu oraz wyniku rzutu kostką.
-		<li><u>obrażenia</u>:<br />Każdy śmiałek może otrzymać 9 lekkich ran; każde 3 lekkie rany są traktowane jak 1 ciężka rana która
-			wprowadza modyfikator -1<i>STR</i> i <i>DEX</i>.
+			przerzucić. Gdy wypadnie przynajmniej 5, to wartownik zasypia po godzinie warty i resztę nocy śmiałkowie spędzają bez ochrony.</li>
+		<li><u>Ucieczka</u>:<br />Suma <i>DEX</i>, sprintu oraz wyniku rzutu kostką.</li>
+		<li><u>Obrażenia</u>:<br />Każdy śmiałek może otrzymać 9 lekkich ran; każde 3 lekkie rany są traktowane jak 1 ciężka rana która
+			wprowadza modyfikator -1<i>STR</i> i <i>DEX</i>.</li>
+		<li><u>Stres</u>:<br /><i>ML</i> wzrasta po każdej walce, po nieudanym rzucie kostką (1, 2 lub 3), po otrzymaniu ciężkiej rany (tylko
+			poza walką) i po spaniu najwyżej 4 godziny dwie doby (niekoniecznie z rzędu). Natomiast spada po spaniu 8 godzin, po rzucie kostką z
+			przerzutem oraz z czasem. Poziom 1 powoduje modyfikator -1<i>CHA, OBS</i>, poziom 2 przynosi modyfikator -2<i>CHA, OBS</i>,
+			-1<i>INT</i>, a poziom 3 przenosi modyfikator z poziomu 2, plus za sen otrzymuje się o 1 mniej energii (tj. +1<i>ENE</i> za 8 godzin,
+			+0<i>ENE</i> za 6 godzin, -1<i>ENE</i> za 4 godziny i -2<i>ENE</i> za mniej niż 4 godziny).</li>
 	</ol>
 	<br />
 </p>
